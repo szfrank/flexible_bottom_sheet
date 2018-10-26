@@ -47,7 +47,24 @@ class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
   void _incrementCounter() {
-    List tmpList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+    List tmpList = [
+      '如何用Mac自带的QuickTime Player录制视频并制作GIF动图',
+      '之前写简书或者别的博客文章，看到别人家的博客GIF动图做的酷炫',
+      '选取文件那里选择你刚刚保存的剪辑后的视频文件',
+      '这是一个优雅的测试',
+      '之前写简书或者别的博客文章，看到别人家的博客GIF动图做的酷炫',
+      '如何用Mac自带的QuickTime Player录制视频并制作GIF动图',
+      '这是一个优雅的测试',
+      '如何用Mac自带的QuickTime Player录制视频并制作GIF动图',
+      '之前写简书或者别的博客文章，看到别人家的博客GIF动图做的酷炫',
+      '这是一个优雅的测试',
+      '之前写简书或者别的博客文章，看到别人家的博客GIF动图做的酷炫',
+      '打开QuickTime Player,选择菜单栏上的文件，选择新建屏幕录制，如下图所示',
+      '录制后保存到桌面上，用QuickTime Player打开刚才录制的视频文件',
+      '之后可以看到剪辑横条，红色线可以选择你要剪切掉的内容',
+      '打开后，选择菜单栏上的显示->显示剪辑',
+      '然后选择编辑->分离剪辑，会得到下面的图片',
+    ];
     showFlexibleModalBottomSheet<void>(
       context: context,
       builder: (BuildContext context) {
@@ -69,8 +86,15 @@ class _MyHomePageState extends State<MyHomePage> {
             child: ListView.builder(
               padding: const EdgeInsets.symmetric(horizontal: 10.0),
               itemBuilder: (_, int index) {
-                final int data = tmpList[index];
-                return Center(child: Text('text' + data.toString()));
+                final String data = tmpList[index];
+                return Container(
+                  padding: const EdgeInsets.symmetric(
+                      vertical: 5.0, horizontal: 10.0),
+                  child: Text(
+                    data ?? '',
+                    textAlign: TextAlign.start,
+                  ),
+                );
               },
               itemCount: tmpList.length,
               // controller: _scrollControll,
