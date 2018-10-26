@@ -1,5 +1,4 @@
 library flexible_bottom_sheet;
-
 // Copyright 2015 The Chromium Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
@@ -26,24 +25,24 @@ const double _kCloseProgressThreshold = 0.5;
 ///
 ///  * _Modal_. A modal bottom sheet is an alternative to a menu or a dialog and
 ///    prevents the user from interacting with the rest of the app. Modal bottom
-///    sheets can be created and displayed with the [showFlexibleBottomSheet]
+///    sheets can be created and displayed with the [showFlexibleModalBottomSheet]
 ///    function.
 ///
 /// The [FlexibleBottomSheet] widget itself is rarely used directly. Instead, prefer to
 /// create a persistent bottom sheet with [ScaffoldState.showFlexibleBottomSheet] or
-/// [Scaffold.bottomSheet], and a modal bottom sheet with [showFlexibleBottomSheet].
+/// [Scaffold.bottomSheet], and a modal bottom sheet with [showFlexibleModalBottomSheet].
 ///
 /// See also:
 ///
 ///  * [ScaffoldState.showFlexibleBottomSheet]
-///  * [showFlexibleBottomSheet]
+///  * [showFlexibleModalBottomSheet]
 ///  * <https://material.google.com/components/bottom-sheets.html>
 class FlexibleBottomSheet extends StatefulWidget {
   /// Creates a bottom sheet.
   ///
   /// Typically, bottom sheets are created implicitly by
   /// [ScaffoldState.showFlexibleBottomSheet], for persistent bottom sheets, or by
-  /// [showFlexibleBottomSheet], for modal bottom sheets.
+  /// [showFlexibleModalBottomSheet], for modal bottom sheets.
   const FlexibleBottomSheet(
       {Key key,
       this.animationController,
@@ -303,11 +302,11 @@ class _ModalFlexibleBottomSheetRoute<T> extends PopupRoute<T> {
 /// See also:
 ///
 ///  * [FlexibleBottomSheet], which is the widget normally returned by the function
-///    passed as the `builder` argument to [showFlexibleBottomSheet].
+///    passed as the `builder` argument to [showFlexibleModalBottomSheet].
 ///  * [showFlexibleBottomSheet] and [ScaffoldState.showFlexibleBottomSheet], for showing
 ///    non-modal bottom sheets.
 ///  * <https://material.google.com/components/bottom-sheets.html#bottom-sheets-modal-bottom-sheets>
-Future<T> showFlexibleBottomSheet<T>({
+Future<T> showFlexibleModalBottomSheet<T>({
   @required BuildContext context,
   @required WidgetBuilder builder,
 }) {
@@ -348,7 +347,7 @@ Future<T> showFlexibleBottomSheet<T>({
 /// A closely related widget is a modal bottom sheet, which is an alternative
 /// to a menu or a dialog and prevents the user from interacting with the rest
 /// of the app. Modal bottom sheets can be created and displayed with the
-/// [showFlexibleBottomSheet] function.
+/// [showFlexibleModalBottomSheet] function.
 ///
 /// The `context` argument is used to look up the [Scaffold] for the bottom
 /// sheet. It is only used when the method is called. Its corresponding widget
@@ -357,7 +356,7 @@ Future<T> showFlexibleBottomSheet<T>({
 /// See also:
 ///
 ///  * [FlexibleBottomSheet], which is the widget typically returned by the `builder`.
-///  * [showFlexibleBottomSheet], which can be used to display a modal bottom
+///  * [showFlexibleModalBottomSheet], which can be used to display a modal bottom
 ///    sheet.
 ///  * [Scaffold.of], for information about how to obtain the [BuildContext].
 ///  * <https://material.google.com/components/bottom-sheets.html#bottom-sheets-persistent-bottom-sheets>
