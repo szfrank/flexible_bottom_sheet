@@ -11,3 +11,4 @@ For help on editing package code, view the [documentation](https://flutter.io/de
 
 灵活的bottom model sheet,顶部有圆角功能，觉得不错顺手一个star。
 
+<img width="38%" height="38%" src="https://github.com/ifrankyu/flexible_bottom_sheet/blob/master/aaaaaaaa.gif"/>
